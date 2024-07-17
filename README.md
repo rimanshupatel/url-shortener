@@ -7,3 +7,8 @@
  button. you get easily short url. 
 
  <P>it helps to create easy & sharable short Urls where you want to share 😊</P>
+ 
+## ⚠️ Note
+Make sure your url must with `https://` & `http://`  either you get error 
+
+➡️ your link should be like that :- ✅ **`https://www.example.in`** ||  **`www.example.in`**  ❌ 
