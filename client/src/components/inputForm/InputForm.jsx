@@ -1,7 +1,10 @@
 import React from "react";
-const InputForm = () => {
+const InputForm = ({ shorten, setUrl }) => {
+  //   const handleChange = (e) => {
+  //     console.log(e.target.value);
+  //   };
   return (
-    <form onSubmit={() => e.preventDefault()} className="pt-2 w-full">
+    <form onSubmit={(e) => shorten(e)} method="post" className="pt-2 w-full">
       <div>
         <div className=" py-5 "></div>
         <div className="text-xl my-2 poppins tracking-[.05em]">
@@ -13,11 +16,13 @@ const InputForm = () => {
               type="text"
               placeholder="https://example.com"
               className="p-3 w-full text-lg bg-transparent outline-none transition delay-150"
+              onChange={(e) => setUrl(e.target.value)}
             />
           </div>
           <button
             type="button"
             className=" py-1 px-5 m-1 tracking-[.05em] rounded-lg bg-indigo-950 text-white font-semibold"
+            onClick={shorten}
           >
             shorten
           </button>
