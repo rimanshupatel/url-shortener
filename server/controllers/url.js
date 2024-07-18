@@ -16,6 +16,12 @@ async function generateShortUrl(req, res) {
   return res.status(201).json({ short: id });
 }
 
+async function getAllUrls(req, res) {
+  const allurls = await URL.find({});
+  return res.status(200).json(allurls);
+}
+
 module.exports = {
   generateShortUrl,
+  getAllUrls,
 };
