@@ -1,8 +1,10 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 const InputForm = ({ shorten, setUrl }) => {
   //   const handleChange = (e) => {
   //     console.log(e.target.value);
   //   };
+
   return (
     <form onSubmit={(e) => shorten(e)} method="post" className="pt-2 w-full">
       <div>
