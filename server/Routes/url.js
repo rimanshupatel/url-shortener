@@ -1,6 +1,7 @@
 const express = require("express");
-const { generateShortUrl } = require("../controllers/url");
+const { generateShortUrl, getAllUrls } = require("../controllers/url");
 const router = express.Router();
-router.post("/", generateShortUrl);
+router.get("/api/url", getAllUrls);
+router.post("/api/url/shorten", generateShortUrl);
 
 module.exports = router;
