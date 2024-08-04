@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-const InputForm = ({ shorten, setUrl }) => {
+const InputForm = ({ shorten, setInputUrl, inputUrl }) => {
   //   const handleChange = (e) => {
   //     console.log(e.target.value);
   //   };
@@ -17,8 +17,9 @@ const InputForm = ({ shorten, setUrl }) => {
             <input
               type="text"
               placeholder="https://example.com"
+              // value={inputUrl}
               className="p-3 w-full text-lg bg-transparent outline-none transition delay-150"
-              onChange={(e) => setUrl(e.target.value)}
+              onChange={(e) => setInputUrl(e.target.value)}
             />
           </div>
           <button

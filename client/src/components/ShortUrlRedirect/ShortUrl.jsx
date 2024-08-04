@@ -1,13 +1,13 @@
 import React from "react";
 
-const ShortUrl = () => {
+const ShortUrl = ({ shortenUrl }) => {
   return (
     <div className="my-8">
       <div className="flex justify-between items-center  h-[90px] w-full gap-3 MainShadow p-1">
         <div className="flex items-center ml-4 w-full">
           <input
             type="text"
-            value={`https://localhost:8000/dfdkfdkf`}
+            value={`${shortenUrl}`}
             className="p-3 w-full text-lg outline-none transition delay-150 border-blue-500 ring-1 ring-blue-500 rounded-lg"
             readOnly
           />
